@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+  <meta charset="UTF-8">
+  <script language="JavaScript">
+    function showInput() {
+        document.getElementById('display').innerHTML = 
+                    document.getElementById("user_input").value;
+                    document.getElementById('display1').innerHTML = 
+                    document.getElementById("type1").value;
+                    document.getElementById('display1').innerHTML = 
+                    document.getElementById("type2").value;
+                    document.getElementById('display2').innerHTML = 
+                    document.getElementById("addr").value;
+                    document.getElementById('display3').innerHTML = 
+                    document.getElementById("email").value;
+                    document.getElementById('display4').innerHTML = 
+                    document.getElementById("nmber").value;
+                    document.getElementById('display5').innerHTML = 
+                    document.getElementById("location").value;
+    }
+  </script>
+  <style>
+      table,td,th,tr {
+  border: 1px solid black;
+  text-align: center;
+}
+.form{
+    display: block;
+    text-align: center  ;
+}
+
+  </style>
+  </head>
+<body style="background-color: #F8F8FA;">
+    <h1 style="text-align: center; color: #006666;">ADDRESS BOOK</h1>
+<div class="form"> 
+<form>
+    <label><b>Name :</b></label>
+    <input type="text" name="message" id="user_input" placeholder="enter your name"><br/>
+    <label><b>Type :</b></label>
+    <input type="radio" id="type1" name="type" value="permanent">
+    <label for="male">permanent</label>
+    <input type="radio" id="type2" name="type" value="temporary">
+    <label for="female">temporary</label><br>
+    <label style="vertical-align: top;"><b>Address :</b></label>
+    <textarea id="addr" name="address" rows="3" cols="22" placeholder="Enter address"></textarea><br/>
+    <label><b>Email :</b></label>
+    <input type="email" name="email" id="email" placeholder="abc@gmail.com"><br/>
+    <label><b>Telephone Number :</b></label>
+    <input type="text" id="nmber" name="nmber" maxlength="10" placeholder="enter your number"><br/>
+    <label for="location"><b>choose a location :</b></label>
+    <select id="location">
+        <option value="COIMBATORE">COIMBATORE</option>
+        <option value="CHENNAI">CHENNAI</option>
+        <option value="BANGALORE">BANGALORE</option>
+    </select><br/>
+    <input type="button"onclick="showInput();" value="Add"> 
+    <input type="reset" value="Reset">     
+</form>   
+</div>
+  <table style="width:50%" align="center" >
+    <tr>
+        <th>Name</th>
+        <th>Type</th> 
+        <th>Address</th>
+        <th>Email</th>
+        <th>Telephone number</th>
+        <th>Location</th>
+      </tr>
+      <tr>
+        <td id="display"></td>
+        <td id="display1"></td>
+        <td id="display2"></td>
+        <td id="display3"></td>
+        <td id="display4"></td>
+        <td id="display5"></td>
+      </tr>
+  </table>
+</body>
+</html>
+ 
+  
+
